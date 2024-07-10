@@ -1,0 +1,319 @@
+/* Importing Google Fonts with fallback */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200;1,300&display=swap");
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #fff; /* Consider using a variable for text color */
+}
+
+
+/* Body styles */
+body {
+  min-height: 100vh;
+  background: rgb(183, 190, 210);
+  background: radial-gradient(
+    circle,
+    rgba(183, 190, 210, 1) 0%,
+    rgba(183, 190, 210, 1) 100%
+  );
+}
+
+/* Header styles */
+.header {
+  width: 100%;
+  background: rgb(212, 216, 230);
+  background: radial-gradient(
+    circle,
+    rgb(227, 228, 235) 0%,
+    rgb(179, 181, 190) 100%
+  );
+  backdrop-filter: blur(50px);
+}
+
+/* Logo styles */
+#logo {
+  font-size: 2rem;
+  color: rgb(45, 101, 16);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+#logo a{
+    margin-top: 10px;
+}
+#logo img{
+    border-radius: 50%;
+    margin: 10px;
+    max-height: 100%;
+    max-width: 100%;
+
+}
+
+.header #logo:hover {
+  color: rgb(140, 195, 66);
+}
+
+/* Navbar styles */
+.header .navbar1:hover {
+    color: rgb(140, 195, 66);
+}
+
+.navbar1 a {
+  font-size: 1.2rem;
+  color: rgb(45, 101, 16);
+  text-decoration: none;
+  font-weight: 400;
+  margin-left: 2.5rem;
+  cursor: pointer;
+}
+
+.navbar1 a:hover {
+    color: rgb(140, 195, 66);
+}
+
+/* Media Icons styles */
+.fa-brands,
+.fab,
+.fa-solid {
+  font-weight: 400;
+  color: rgb(45, 101, 16);
+}
+
+.header .media-icons a {
+  font-size: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.header .media-icons .fa-solid:hover,
+.header .media-icons .fa-brands:hover {
+    color: rgb(140, 195, 66);
+}
+
+/* Icons styles */
+.icons {
+  position: absolute;
+  right: 5%;
+  font-size: 2.8rem;
+  color: rgb(225, 12, 248);
+  cursor: pointer;
+  display: none;
+}
+
+/*SLIDER*/
+/* Slideshow container */
+.slider {
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+  }
+  
+  .slide {
+    flex: 0 0 auto;
+    width: 100%;
+    transition: transform 0.5s ease;
+    position: relative;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(214, 245, 214, 0.5);
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+
+/* Footer CSS */
+footer {
+    margin-top: 100%;
+  background: #d4d8e6;
+  padding: 15px 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+footer .text span {
+  font-size: 17px;
+  font-weight: 400;
+  color: rgb(45, 101, 16);
+}
+
+footer .text span a {
+  font-weight: 500;
+  color: rgb(45, 101, 16);
+}
+
+footer .text span a:hover {
+  text-decoration: underline; 
+}
+
+
+.navbar1 {
+  display: none;
+}
+
+#check:checked ~ .navbar1 {
+  display: block;
+}
+/* Existing styles */
+
+/* Small Devices (up to 425px) */
+@media only screen and (max-width: 460px) {
+  .box {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  /* .icons:checked ~ .navbar, */
+  .icons:checked ~ .navbar1 {
+    display: block;
+  }
+
+  .logo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto 20px;
+  }
+
+
+  .navbar1 a:hover {
+    color: rgb(0, 0, 255);
+  }
+  
+
+
+  .media-icons {
+    display: none;
+  }
+
+
+  .hero .left{
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .hero .right img {
+    display: none;
+  }
+
+ .main , .main1{
+  margin: 10px auto 10px;
+ }
+}
+
+
+/* .icons{
+  display: none;
+  position: absolute;
+}
+ */
+
+
+/* Medium Devices (426px to 900px) */
+@media only screen and (min-width: 461px) and (max-width: 900px) {
+  .box {
+    grid-template-columns:1fr 1fr;
+    grid-gap: 10px;
+  }
+.hom{
+  display: none;
+}
+ 
+  .header {
+    padding: 1.3rem 5%;
+  }
+.hero .left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right{
+  display: none;
+}
+.main, .main1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 20px;
+}
+  /* .icons {
+    display: inline-block;
+  } */
+
+  #check:checked ~ .icons #menu-icon {
+    display: none;
+  }
+
+  .icons #close-icon {
+    display: none;
+  }
+
+  #check:checked ~ .icons #close-icon {
+    display: block;
+  }
+
+ 
+
+  .icons{
+    display: block;
+    position: relative;
+  }
+}
+
+
+
+/* Large Devices (901px and above) */
+@media only screen and (min-width: 901px) {
+  #parap {
+    display: none;
+  }
+}
+.icons{
+  display: none;
+}
